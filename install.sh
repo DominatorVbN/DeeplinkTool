@@ -5,6 +5,9 @@ set -e
 echo "🚀 Installing DeeplinkTool..."
 
 # Build the Swift package
+echo "⚙️ Building..."
+swift build --disable-sandbox -c release
+echo "⚙️ Build Succeded..."
 build_path=$(swift build --disable-sandbox -c release --show-bin-path)
 binary_path="$build_path/DeeplinkTool"
 
